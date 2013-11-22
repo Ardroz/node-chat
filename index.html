@@ -14,7 +14,7 @@
       <input size="25" id="from"></input>
       <br>
       <input size="35" id="message"></input>
-      <input type="submit"></input>
+      <input type="submit" value="Enviar"></input>
     </form>
     <div id="chat"></div>
     
@@ -36,7 +36,6 @@
         });
         
         socket.on('new message', function(data){
-          console.log(data);
           $chat.append("<b>" + data.from + ":</b>" + data.text +"<br/>");
         });
       });
